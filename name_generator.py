@@ -10,23 +10,30 @@ japanese_alphabet = {
     'u': 'do', 'v': 'ru', 'w': 'mei', 'x': 'na', 'y': 'fu', 'z': 'zi'
 }
 
-# 1. Asking users for their name
-english_name = input("Type your name: ")
+print("=== JAPANESE NAME GENERATOR STARTED ===")
+print("(Type 'quit' at any time to exit the program)\n")
 
-# 2. Make the name lowercase to matches our list of keys
-clean_name = english_name.lower()
-
-# 3. Create a blank container to hold the translation
-japanese_name = ""
-
-# 4. Loop through every letter in the name and convert it
-for letter in clean_name:
-    if letter in japanese_alphabet:
-        japanese_name += japanese_alphabet[letter]
-    else:
-        # If there's a space or symbol, keep it as it is
-        japanese_name += letter
-
-# 5. Print the final results out to the screen
-print(f"Your English name is: {english_name.capitalize()}")
-print(f"In Japanese syllables, you are called: {japanese_name.capitalize()}")
+# This loop runs forever until it hits a 'break' statement
+while True: 
+   # 1. Ask the user for their name
+    english_name = input("Type a name: ")
+    
+    # 2. Check if the user wants to exit the program
+    if english_name.lower() == 'quit':
+        print("Thank you for using the generator. Goodbye!")
+        break  # This exits the while loop immediately
+        
+    # 3. Clean the input and prepare the container
+    clean_name = english_name.lower()
+    japanese_name = ""
+    
+    # 4. Loop through every letter in the name and convert it
+    for letter in clean_name:
+        if letter in japanese_alphabet:
+            japanese_name += japanese_alphabet[letter]
+        else:
+            japanese_name += letter
+            
+    # 5. Print the final results out to the screen with spacing
+    print(f"-> English: {english_name.capitalize()}")
+    print(f"-> Japanese: {japanese_name.capitalize()}\n")
