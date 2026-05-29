@@ -1,4 +1,7 @@
-# A mapping of English letters to Japanese phonetic syllables
+# Project: Japanese Phonetic Name Generator
+# Data Structure: Python Dictionary (Key-Value Pairs)
+# Description: Maps English characters to Japanese syllables
+
 japanese_alphabet = {
     'a': 'ka', 'b': 'tu', 'c': 'mi', 'd': 'te', 'e': 'ku', 
     'f': 'lu', 'g': 'ji', 'h': 'ri', 'i': 'ki', 'j': 'zu', 
@@ -7,10 +10,10 @@ japanese_alphabet = {
     'u': 'do', 'v': 'ru', 'w': 'mei', 'x': 'na', 'y': 'fu', 'z': 'zi'
 }
 
-# 1. Ask the user for their name
+# 1. Asking users for their name
 english_name = input("Type your name: ")
 
-# 2. Make the name lowercase so it matches our list keys
+# 2. Make the name lowercase to matches our list of keys
 clean_name = english_name.lower()
 
 # 3. Create a blank container to hold the translation
